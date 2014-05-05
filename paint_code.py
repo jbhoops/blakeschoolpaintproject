@@ -105,6 +105,7 @@ class MyPaintApp(App):
     
     return parent
     
-    
 if __name__ == '__main__':
   MyPaintApp().run()
+  
+  #Emma Was Here

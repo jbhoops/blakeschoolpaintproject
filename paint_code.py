@@ -25,16 +25,17 @@ class MyPaintApp(App):
     parent = Widget()
     painter = MyPaintWidget()
     clearbtn = Button(text='Clear', size =(60,60))
-    redbtn = Button(text='Red', pos = (0,360), size=(60,60))
-    ylwbtn = Button(text= 'Yellow', pos = (0,240), size=(60,60))
-    blubtn = Button(text= 'Blue', pos =(0,120), size =(60,60))
-    prplbtn = Button(text= 'Purple', pos=(0,60), size=(60,60))
-    grnbtn = Button(text= 'Green', pos=(0,180), size=(60,60))
-    orngbtn = Button(text= 'Orange', pos =(0,300), size=(60,60))
-    whtbtn = Button(text= 'White', pos=(0,420), size=(60,60))
+    redbtn = Button(text='Red', pos = (0,420), size=(60,60))
+    ylwbtn = Button(text= 'Yellow', pos = (0,300), size=(60,60))
+    blubtn = Button(text= 'Blue', pos =(0,180), size =(60,60))
+    prplbtn = Button(text= 'Purple', pos=(0,120), size=(60,60))
+    grnbtn = Button(text= 'Green', pos=(0,240), size=(60,60))
+    orngbtn = Button(text= 'Orange', pos =(0,360), size=(60,60))
+    whtbtn = Button(text= 'White', pos=(0,480), size=(60,60))
     #cynbtn = Button(text= 'Cyan', pos=(0,240), size=(60,60))
     #mgntabtn = Button(text= 'Magenta', pos=(0,60), size=(60,60))
-    randbtn = Button(text= 'Random', pos=(0,480), size=(60, 60))
+    randbtn = Button(text= 'Random', pos=(0, 540), size=(60, 60))
+    ersrbtn = Button(text= 'Eraser', pos=(0, 60), size=(60, 60))
     
     parent.add_widget(painter)
     parent.add_widget(clearbtn)
@@ -48,6 +49,7 @@ class MyPaintApp(App):
     #parent.add_widget(cynbtn)
     #parent.add_widget(mgntabtn)
     parent.add_widget(randbtn)
+    parent.add_widget(ersrbtn)
         
     def Random(obj):
       global color
@@ -88,6 +90,11 @@ class MyPaintApp(App):
       global color
       color = (0,0,1)
     blubtn.bind(on_release=Blue)
+    
+    def Eraser(obj):
+      global color
+      color = (0,0,0)
+    ersrbtn.bind(on_release=Eraser)
     
     #def Cyan(obj):
       #global color

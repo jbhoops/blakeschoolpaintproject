@@ -23,8 +23,8 @@ class MyPaintWidget(Widget):
     #CHANGE TO YOUR USERNAME
     #SORRY NOT SORRY
     Window.screenshot(name='/Users/hewarren14/Desktop/SCREENSHOT-BOMPTON' + str(tracker) + '.png')
-      global tracker
-      tracker += 1    
+    global tracker
+    tracker += 1    
 class MyPaintApp(App):
   
   def build(self):

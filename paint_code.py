@@ -4,6 +4,7 @@ from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.graphics import Color, Ellipse, Line
 
+tracker = 0
 color = (1, 1, 1)
 
 class MyPaintWidget(Widget):
@@ -17,8 +18,13 @@ class MyPaintWidget(Widget):
   
   def on_touch_move(self,touch):
     touch.ud['line'].points += [touch.x, touch.y]
-    
-    
+  
+  def on_touch_up(self,touch):
+    #CHANGE TO YOUR USERNAME
+    #SORRY NOT SORRY
+    Window.screenshot(name='/Users/hewarren14/Desktop/SCREENSHOT-BOMPTON' + str(tracker) + '.png')
+      global tracker
+      tracker += 1    
 class MyPaintApp(App):
   
   def build(self):

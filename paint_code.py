@@ -18,13 +18,7 @@ class MyPaintWidget(Widget):
   
   def on_touch_move(self,touch):
     touch.ud['line'].points += [touch.x, touch.y]
-  
-  def on_touch_up(self,touch):
-    #CHANGE TO YOUR USERNAME
-    #SORRY NOT SORRY
-    Window.screenshot(name='/Users/hewarren14/Desktop/SCREENSHOT-BOMPTON' + str(tracker) + '.png')
-    global tracker
-    tracker += 1    
+   
 class MyPaintApp(App):
   
   def build(self):
@@ -112,7 +106,11 @@ class MyPaintApp(App):
       #color = (1,0,1)
     #mgnta.bind(on_release=Magenta)
     
+    
     def clear_canvas(obj):
+      Window.screenshot(name='/Users/zkmccandler14/Desktop/SCREENSHOT_BOMPTON' + str(tracker) + '.png')
+      global tracker
+      tracker += 1  
       painter.canvas.clear()
     clearbtn.bind(on_release=clear_canvas)
     
